@@ -65,14 +65,14 @@ void RfidTask::scanCard(String& uid){
                 foundCard = true;
                 if (!isAuthenticated()){
                     setAuthentication(uid);
-                    lcd.display("RFID: authenticated", 0, 1, 5 * 1000, LCD_CLEAR_LINE);
+                    lcd.display("Authenticated", 0, 1, 5 * 1000, LCD_CLEAR_LINE);
                     DBUGLN(F("[rfid] found card"));
                 } else if (uid == authenticatedTag) {
                     resetAuthentication();
-                    lcd.display("RFID: finished. See you next time!", 0, 1, 5 * 1000, LCD_CLEAR_LINE);
+                    lcd.display("finished.See you", 0, 1, 5 * 1000, LCD_CLEAR_LINE);
                     DBUGLN(F("[rfid] finished by presenting card"));
                 } else {
-                    lcd.display("RFID: card does not match", 0, 1, 5 * 1000, LCD_CLEAR_LINE);
+                    lcd.display("tag doesn't match", 0, 1, 5 * 1000, LCD_CLEAR_LINE);
                     DBUGLN(F("[rfid] card does not match"));
                 }
                 break;

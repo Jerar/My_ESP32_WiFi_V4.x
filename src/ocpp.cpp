@@ -226,7 +226,7 @@ void ArduinoOcppTask::loadEvseBehavior() {
                 endSession();
                 LCD_DISPLAY("Card accepted");
             } else {
-                LCD_DISPLAY("Card not recognized");
+                LCD_DISPLAY("Not recognized");
             }
         } else {
             //idle mode
@@ -314,7 +314,7 @@ unsigned long ArduinoOcppTask::loop(MicroTasks::WakeReason reason) {
             if (ocppTxIdDisplay < 0) {
                 if (config_rfid_enabled()) {
                     LCD_DISPLAY("Card timeout");
-                    LCD_DISPLAY("Present card again");
+                    LCD_DISPLAY("Tap card again");
                 } else {
                     LCD_DISPLAY("Auth timeout");
                 }
