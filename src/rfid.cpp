@@ -81,7 +81,7 @@ void RfidTask::scanCard(String& uid){
         }
 
         if (!foundCard) {
-            lcd.display("RFID: did not recognize card", 0, 1, 5 * 1000, LCD_CLEAR_LINE);
+            lcd.display("Unknown card", 0, 1, 5 * 1000, LCD_CLEAR_LINE);
             DBUGLN(F("[rfid] did not recognize card"));
         }
     }
