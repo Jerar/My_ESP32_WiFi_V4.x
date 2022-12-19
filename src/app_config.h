@@ -73,6 +73,7 @@ extern uint32_t scheduler_start_window;
 //Shaper settings
 extern uint32_t current_shaper_max_pwr;
 
+
 // 24-bits of Flags
 extern uint32_t flags;
 
